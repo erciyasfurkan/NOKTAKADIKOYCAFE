@@ -38,14 +38,8 @@
     <h2 class="section-title">Create Your Order</h2>
     <div class="order-layout">
       <div class="order-form-container">
-        <form action="summary.html" method="POST" class="form box-style" data-netlify="true"
+        <form name="order" action="summary.html" method="POST" class="form box-style" data-netlify="true"
           netlify-honeypot="bot-field">
-
-          <p class="hidden" style="display: none;">
-            <label>
-              Bu alanı doldurma: <input name="bot-field" />
-            </label>
-          </p>
 
           <label for="name" class="form__label">Your Full Name</label>
           <input type="text" id="name" name="name" class="form__input" required />
