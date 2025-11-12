@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body class="order-page">
   <header class="header">
     <div class="container header__container">
       <button class="hamburger-btn" aria-label="Menüyü aç/kapat" aria-expanded="false">
@@ -56,72 +56,134 @@
 
             <fieldset class="form__group">
               <legend class="form__legend--inner">Hot Coffees</legend>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Espresso" data-price="45">
-                Espresso</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Americano" data-price="50">
-                Americano</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Latte" data-price="55">
-                Latte</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Cappuccino" data-price="55">
-                Cappuccino</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Turkish Coffee"
-                  data-price="50"> Turkish Coffee</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Flat White" data-price="60">
-                Flat White</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Matcha Latte" data-price="75">
-                Matcha Latte</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Cascara (Coffee Cherry Tea)"
-                  data-price="70"> Cascara (Coffee Cherry Tea)</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Hot Chocolate" data-price="70">
-                Hot Chocolate</label>
+              <div class="form-quantity-item">
+                <label for="qty-espresso" class="form__label">Espresso</label>
+                <input type="number" id="qty-espresso" name="qty-espresso" class="form__input form__input--quantity" data-price="45" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-americano" class="form__label">Americano</label>
+                <input type="number" id="qty-americano" name="qty-americano" class="form__input form__input--quantity" data-price="50" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-latte" class="form__label">Latte</label>
+                <input type="number" id="qty-latte" name="qty-latte" class="form__input form__input--quantity" data-price="55" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-cappuccino" class="form__label">Cappuccino</label>
+                <input type="number" id="qty-cappuccino" name="qty-cappuccino" class="form__input form__input--quantity" data-price="55" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-turkish" class="form__label">Turkish Coffee</label>
+                <input type="number" id="qty-turkish" name="qty-turkish" class="form__input form__input--quantity" data-price="50" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-flatwhite" class="form__label">Flat White</label>
+                <input type="number" id="qty-flatwhite" name="qty-flatwhite" class="form__input form__input--quantity" data-price="60" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-matcha" class="form__label">Matcha Latte</label>
+                <input type="number" id="qty-matcha" name="qty-matcha" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-cascara" class="form__label">Cascara (Coffee Cherry Tea)</label>
+                <input type="number" id="qty-cascara" name="qty-cascara" class="form__input form__input--quantity" data-price="70" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-hotchoco" class="form__label">Hot Chocolate</label>
+                <input type="number" id="qty-hotchoco" name="qty-hotchoco" class="form__input form__input--quantity" data-price="70" min="0" value="0">
+              </div>
             </fieldset>
 
             <fieldset class="form__group">
               <legend class="form__legend--inner">Cold Beverages</legend>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Iced Americano"
-                  data-price="55"> Iced Americano</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Cold Brew" data-price="65">
-                Cold Brew</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Chocolate Cookie Frappe"
-                  data-price="85"> Chocolate Cookie Frappe</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Milkshake" data-price="75">
-                Milkshake</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Iced Latte" data-price="60">
-                Iced Latte</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Homemade Lemonade"
-                  data-price="65"> Homemade Lemonade</label>
+              <div class="form-quantity-item">
+                <label for="qty-iced-americano" class="form__label">Iced Americano</label>
+                <input type="number" id="qty-iced-americano" name="qty-iced-americano" class="form__input form__input--quantity" data-price="55" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-cold-brew" class="form__label">Cold Brew</label>
+                <input type="number" id="qty-cold-brew" name="qty-cold-brew" class="form__input form__input--quantity" data-price="65" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-frappe" class="form__label">Chocolate Cookie Frappe</label>
+                <input type="number" id="qty-frappe" name="qty-frappe" class="form__input form__input--quantity" data-price="85" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-milkshake-choco" class="form__label">Milkshake (Chocolate)</label>
+                <input type="number" id="qty-milkshake-choco" name="qty-milkshake-choco" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-milkshake-vanilla" class="form__label">Milkshake (Vanilla)</label>
+                <input type="number" id="qty-milkshake-vanilla" name="qty-milkshake-vanilla" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-milkshake-strawberry" class="form__label">Milkshake (Strawberry)</label>
+                <input type="number" id="qty-milkshake-strawberry" name="qty-milkshake-strawberry" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-iced-latte" class="form__label">Iced Latte</label>
+                <input type="number" id="qty-iced-latte" name="qty-iced-latte" class="form__input form__input--quantity" data-price="60" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-lemonade" class="form__label">Homemade Lemonade</label>
+                <input type="number" id="qty-lemonade" name="qty-lemonade" class="form__input form__input--quantity" data-price="65" min="0" value="0">
+              </div>
             </fieldset>
 
             <fieldset class="form__group">
               <legend class="form__legend--inner">Savory Bites</legend>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Feta Cheese Sandwich"
-                  data-price="70"> Feta Cheese Sandwich</label>
-              <label class="form__checkbox"><input type="checkbox" name="product"
-                  value="Smoked Turkey & Cheese Croissant" data-price="75"> Smoked Turkey & Cheese Croissant</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Avocado Toast" data-price="85">
-                Avocado Toast</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Granola Bowl" data-price="80">
-                Granola Bowl</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Simit Plate" data-price="75">
-                Simit Plate</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Spinach Quiche"
-                  data-price="75"> Spinach Quiche</label>
+              <div class="form-quantity-item">
+                <label for="qty-feta-sandwich" class="form__label">Feta Cheese Sandwich</label>
+                <input type="number" id="qty-feta-sandwich" name="qty-feta-sandwich" class="form__input form__input--quantity" data-price="70" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-turkey-croissant" class="form__label">Smoked Turkey & Cheese Croissant</label>
+                <input type="number" id="qty-turkey-croissant" name="qty-turkey-croissant" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-avocado-toast" class="form__label">Avocado Toast</label>
+                <input type="number" id="qty-avocado-toast" name="qty-avocado-toast" class="form__input form__input--quantity" data-price="85" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-granola-bowl" class="form__label">Granola Bowl</label>
+                <input type="number" id="qty-granola-bowl" name="qty-granola-bowl" class="form__input form__input--quantity" data-price="80" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-simit-plate" class="form__label">Simit Plate</label>
+                <input type="number" id="qty-simit-plate" name="qty-simit-plate" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-spinach-quiche" class="form__label">Spinach Quiche</label>
+                <input type="number" id="qty-spinach-quiche" name="qty-spinach-quiche" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
             </fieldset>
 
             <fieldset class="form__group">
               <legend class="form__legend--inner">Sweet Treats</legend>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Lemon Cheesecake"
-                  data-price="80"> Lemon Cheesecake</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Fudgy Chocolate Brownie"
-                  data-price="65"> Fudgy Chocolate Brownie</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Blueberry Muffin"
-                  data-price="50"> Blueberry Muffin</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="San Sebastian Cheesecake"
-                  data-price="85"> San Sebastian Cheesecake</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Chocolate Chip Cookie"
-                  data-price="55"> Chocolate Chip Cookie</label>
-              <label class="form__checkbox"><input type="checkbox" name="product" value="Gluten-Free Brownie"
-                  data-price="70"> Gluten-Free Brownie</label>
+              <div class="form-quantity-item">
+                <label for="qty-lemon-cheesecake" class="form__label">Lemon Cheesecake</label>
+                <input type="number" id="qty-lemon-cheesecake" name="qty-lemon-cheesecake" class="form__input form__input--quantity" data-price="80" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-fudgy-brownie" class="form__label">Fudgy Chocolate Brownie</label>
+                <input type="number" id="qty-fudgy-brownie" name="qty-fudgy-brownie" class="form__input form__input--quantity" data-price="65" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-blueberry-muffin" class="form__label">Blueberry Muffin</label>
+                <input type="number" id="qty-blueberry-muffin" name="qty-blueberry-muffin" class="form__input form__input--quantity" data-price="50" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-san-sebastian" class="form__label">San Sebastian Cheesecake</label>
+                <input type="number" id="qty-san-sebastian" name="qty-san-sebastian" class="form__input form__input--quantity" data-price="85" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-cookie" class="form__label">Chocolate Chip Cookie</label>
+                <input type="number" id="qty-cookie" name="qty-cookie" class="form__input form__input--quantity" data-price="55" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-gf-brownie" class="form__label">Gluten-Free Brownie</label>
+                <input type="number" id="qty-gf-brownie" name="qty-gf-brownie" class="form__input form__input--quantity" data-price="70" min="0" value="0">
+              </div>
             </fieldset>
           </div>
 

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sipariş Verin - Nokta Kadıköy</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sipariş Ver - Nokta Kadıköy</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+
+<body class="order-page">
   <header class="header">
     <div class="container header__container">
       <button class="hamburger-btn" aria-label="Menüyü aç/kapat" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
         </svg>
       </button>
       <a href="index-tr.html" class="logo-link">
@@ -23,7 +25,7 @@
         <ul class="nav__list">
           <li class="nav__item"><a href="index-tr.html" class="nav__link">Ana Sayfa</a></li>
           <li class="nav__item"><a href="menu-tr.html" class="nav__link">Menü</a></li>
-          <li class="nav__item"><a href="order-tr.html" class="nav__link active">Sipariş Ver</a></li>
+          <li class="nav__item"><a href="order-tr.html" class="nav__link active">Sipariş</a></li>
           <li class="nav__item"><a href="contact-tr.html" class="nav__link">İletişim</a></li>
         </ul>
       </nav>
@@ -37,7 +39,7 @@
     <h2 class="section-title">Siparişinizi Oluşturun</h2>
     <div class="order-layout">
       <div class="order-form-container">
-        <form name="order" action="/summary-tr.html" method="POST" class="form box-style" data-netlify="true"
+        <form name="order-tr" action="/summary-tr.html" method="POST" class="form box-style" data-netlify="true"
           netlify-honeypot="bot-field">
 
           <p class="hidden" style="display: none;">
@@ -47,71 +49,161 @@
         </p>
 
           <label for="name" class="form__label">Adınız Soyadınız</label>
-            <input type="text" id="name" name="name" class="form__input" required />
-            
-            <div class="form__group menu-checkboxes">
-                <legend class="form__legend">Ürünlerinizi Seçin</legend>
-                
-                <fieldset class="form__group">
-                    <legend class="form__legend--inner">Sıcak Kahveler</legend>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Espresso" data-price="45"> Espresso</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Americano" data-price="50"> Americano</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Latte" data-price="55"> Latte</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Cappuccino" data-price="55"> Cappuccino</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Türk Kahvesi" data-price="50"> Türk Kahvesi</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Flat White" data-price="60"> Flat White</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Matcha Latte" data-price="75"> Matcha Latte</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Cascara (Kahve Kirazı Çayı)" data-price="70"> Cascara (Kahve Kirazı Çayı)</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Sıcak Çikolata" data-price="70"> Sıcak Çikolata</label>
-                </fieldset>
-                
-                <fieldset class="form__group">
-                    <legend class="form__legend--inner">Soğuk İçecekler</legend>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Iced Americano" data-price="55"> Iced Americano</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Cold Brew" data-price="65"> Cold Brew</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Çikolatalı Kurabiyeli Frappe" data-price="85"> Çikolatalı Kurabiyeli Frappe</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Milkshake" data-price="75"> Milkshake</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Iced Latte" data-price="60"> Iced Latte</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Ev Yapımı Limonata" data-price="65"> Ev Yapımı Limonata</label>
-                </fieldset>
+          <input type="text" id="name" name="name" class="form__input" required />
 
-                <fieldset class="form__group">
-                    <legend class="form__legend--inner">Tuzlu Atıştırmalıklar</legend>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Beyaz Peynirli Sandviç" data-price="70"> Beyaz Peynirli Sandviç</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Füme Hindili & Peynirli Kruvasan" data-price="75"> Füme Hindili & Peynirli Kruvasan</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Avokado Tost" data-price="85"> Avokado Tost</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Granola Kasesi" data-price="80"> Granola Kasesi</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Simit Tabağı" data-price="75"> Simit Tabağı</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Ispanaklı Kiş" data-price="75"> Ispanaklı Kiş</label>
-                </fieldset>
+          <div class="form__group menu-checkboxes">
+            <legend class="form__legend">Ürünlerinizi Seçin</legend>
 
-                <fieldset class="form__group">
-                    <legend class="form__legend--inner">Tatlı Lezzetler</legend>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Limonlu Cheesecake" data-price="80"> Limonlu Cheesecake</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Yoğun Çikolatalı Brownie" data-price="65"> Yoğun Çikolatalı Brownie</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Yaban Mersinli Muffin" data-price="50"> Yaban Mersinli Muffin</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="San Sebastian Cheesecake" data-price="85"> San Sebastian Cheesecake</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Damla Çikolatalı Kurabiye" data-price="55"> Damla Çikolatalı Kurabiye</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Glutensiz Brownie" data-price="70"> Glutensiz Brownie</label>
-                </fieldset>
-            </div>
-            
             <fieldset class="form__group">
-                <legend class="form__legend">Servis Türü</legend>
-                <label class="form__radio"><input type="radio" name="service_type" value="dine-in" required> Restoranda</label>
-                <label class="form__radio"><input type="radio" name="service_type" value="takeaway"> Paket Servis</label>
+              <legend class="form__legend--inner">Sıcak Kahveler</legend>
+              <div class="form-quantity-item">
+                <label for="qty-espresso" class="form__label">Espresso</label>
+                <input type="number" id="qty-espresso" name="qty-espresso" class="form__input form__input--quantity" data-price="45" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-americano" class="form__label">Americano</label>
+                <input type="number" id="qty-americano" name="qty-americano" class="form__input form__input--quantity" data-price="50" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-latte" class="form__label">Latte</label>
+                <input type="number" id="qty-latte" name="qty-latte" class="form__input form__input--quantity" data-price="55" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-cappuccino" class="form__label">Cappuccino</label>
+                <input type="number" id="qty-cappuccino" name="qty-cappuccino" class="form__input form__input--quantity" data-price="55" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-turkish" class="form__label">Türk Kahvesi</label>
+                <input type="number" id="qty-turkish" name="qty-turkish" class="form__input form__input--quantity" data-price="50" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-flatwhite" class="form__label">Flat White</label>
+                <input type="number" id="qty-flatwhite" name="qty-flatwhite" class="form__input form__input--quantity" data-price="60" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-matcha" class="form__label">Matcha Latte</label>
+                <input type="number" id="qty-matcha" name="qty-matcha" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-cascara" class="form__label">Cascara (Kahve Kirazı Çayı)</label>
+                <input type="number" id="qty-cascara" name="qty-cascara" class="form__input form__input--quantity" data-price="70" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-hotchoco" class="form__label">Sıcak Çikolata</label>
+                <input type="number" id="qty-hotchoco" name="qty-hotchoco" class="form__input form__input--quantity" data-price="70" min="0" value="0">
+              </div>
             </fieldset>
-            <label for="notes" class="form__label">Ek Notlar</label>
-            <textarea id="notes" name="notes" class="form__textarea" rows="4" placeholder="Süt tercihi, özel istekler..."></textarea>
-            <button type="submit" class="btn btn--accent">
-                Siparişi Tamamla <img src="assets/heart.svg" alt="kalp" class="icon" />
-            </button>
+
+            <fieldset class="form__group">
+              <legend class="form__legend--inner">Soğuk İçecekler</legend>
+              <div class="form-quantity-item">
+                <label for="qty-iced-americano" class="form__label">Iced Americano</label>
+                <input type="number" id="qty-iced-americano" name="qty-iced-americano" class="form__input form__input--quantity" data-price="55" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-cold-brew" class="form__label">Cold Brew</label>
+                <input type="number" id="qty-cold-brew" name="qty-cold-brew" class="form__input form__input--quantity" data-price="65" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-frappe" class="form__label">Çikolatalı Kurabiyeli Frappe</label>
+                <input type="number" id="qty-frappe" name="qty-frappe" class="form__input form__input--quantity" data-price="85" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-milkshake-choco" class="form__label">Milkshake (Çikolatalı)</label>
+                <input type="number" id="qty-milkshake-choco" name="qty-milkshake-choco" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-milkshake-vanilla" class="form__label">Milkshake (Vanilyalı)</label>
+                <input type="number" id="qty-milkshake-vanilla" name="qty-milkshake-vanilla" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-milkshake-strawberry" class="form__label">Milkshake (Çilekli)</label>
+                <input type="number" id="qty-milkshake-strawberry" name="qty-milkshake-strawberry" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-iced-latte" class="form__label">Iced Latte</label>
+                <input type="number" id="qty-iced-latte" name="qty-iced-latte" class="form__input form__input--quantity" data-price="60" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-lemonade" class="form__label">Ev Yapımı Limonata</label>
+                <input type="number" id="qty-lemonade" name="qty-lemonade" class="form__input form__input--quantity" data-price="65" min="0" value="0">
+              </div>
+            </fieldset>
+
+            <fieldset class="form__group">
+              <legend class="form__legend--inner">Tuzlu Atıştırmalıklar</legend>
+              <div class="form-quantity-item">
+                <label for="qty-feta-sandwich" class="form__label">Beyaz Peynirli Sandviç</label>
+                <input type="number" id="qty-feta-sandwich" name="qty-feta-sandwich" class="form__input form__input--quantity" data-price="70" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-turkey-croissant" class="form__label">Hindi Fümeli & Peynirli Kruvasan</label>
+                <input type="number" id="qty-turkey-croissant" name="qty-turkey-croissant" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-avocado-toast" class="form__label">Avokado Tost</label>
+                <input type="number" id="qty-avocado-toast" name="qty-avocado-toast" class="form__input form__input--quantity" data-price="85" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-granola-bowl" class="form__label">Granola Kasesi</label>
+                <input type="number" id="qty-granola-bowl" name="qty-granola-bowl" class="form__input form__input--quantity" data-price="80" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-simit-plate" class="form__label">Simit Tabağı</label>
+                <input type="number" id="qty-simit-plate" name="qty-simit-plate" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-spinach-quiche" class="form__label">Ispanaklı Kiş</label>
+                <input type="number" id="qty-spinach-quiche" name="qty-spinach-quiche" class="form__input form__input--quantity" data-price="75" min="0" value="0">
+              </div>
+            </fieldset>
+
+            <fieldset class="form__group">
+              <legend class="form__legend--inner">Tatlı Lezzetler</legend>
+              <div class="form-quantity-item">
+                <label for="qty-lemon-cheesecake" class="form__label">Limonlu Cheesecake</label>
+                <input type="number" id="qty-lemon-cheesecake" name="qty-lemon-cheesecake" class="form__input form__input--quantity" data-price="80" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-fudgy-brownie" class="form__label">Yoğun Çikolatalı Brownie</label>
+                <input type="number" id="qty-fudgy-brownie" name="qty-fudgy-brownie" class="form__input form__input--quantity" data-price="65" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-blueberry-muffin" class="form__label">Yaban Mersinli Muffin</label>
+                <input type="number" id="qty-blueberry-muffin" name="qty-blueberry-muffin" class="form__input form__input--quantity" data-price="50" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-san-sebastian" class="form__label">San Sebastian Cheesecake</label>
+                <input type="number" id="qty-san-sebastian" name="qty-san-sebastian" class="form__input form__input--quantity" data-price="85" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-cookie" class="form__label">Çikolata Parçacıklı Kurabiye</label>
+                <input type="number" id="qty-cookie" name="qty-cookie" class="form__input form__input--quantity" data-price="55" min="0" value="0">
+              </div>
+              <div class="form-quantity-item">
+                <label for="qty-gf-brownie" class="form__label">Glutensiz Brownie</label>
+                <input type="number" id="qty-gf-brownie" name="qty-gf-brownie" class="form__input form__input--quantity" data-price="70" min="0" value="0">
+              </div>
+            </fieldset>
+          </div>
+
+          <fieldset class="form__group">
+            <legend class="form__legend">Servis Tipi</legend>
+            <label class="form__radio"><input type="radio" name="service_type" value="dine-in" required> Burada Yiyeceğim</label>
+            <label class="form__radio"><input type="radio" name="service_type" value="takeaway"> Paket Servis</label>
+          </fieldset>
+          <label for="notes" class="form__label">Ek Notlar</label>
+          <textarea id="notes" name="notes" class="form__textarea" rows="4"
+            placeholder="Süt tercihi, özel istekler..."></textarea>
+          <button type="submit" class="btn btn--accent">
+            Siparişi Tamamla <img src="assets/heart.svg" alt="heart" class="icon" />
+          </button>
         </form>
       </div>
 
       <aside class="price-guide box-style">
         <h3 class="price-guide__title">Fiyat Listesi</h3>
-        
+
         <h4 class="price-guide__subtitle">Sıcak Kahveler</h4>
         <ul class="price-guide__list">
           <li class="price-guide__item"><span>Espresso</span> <span>45₺</span></li>
@@ -131,66 +223,71 @@
           <li class="price-guide__item"><span>Cold Brew</span> <span>65₺</span></li>
           <li class="price-guide__item"><span>Ev Yapımı Limonata</span> <span>65₺</span></li>
           <li class="price-guide__item"><span>Milkshake</span> <span>75₺</span></li>
-          <li class="price-guide__item"><span>Çikolatalı Frappe</span> <span>85₺</span></li>
+          <li class="price-guide__item"><span>Çikolatalı Kurabiyeli Frappe</span> <span>85₺</span></li>
         </ul>
         <hr class="price-guide__separator">
-        
+
         <h4 class="price-guide__subtitle">Tuzlu Atıştırmalıklar</h4>
         <ul class="price-guide__list">
-            <li class="price-guide__item"><span>Beyaz Peynirli Sandviç</span> <span>70₺</span></li>
-            <li class="price-guide__item"><span>Füme Hindili Kruvasan</span> <span>75₺</span></li>
-            <li class="price-guide__item"><span>Simit Tabağı</span> <span>75₺</span></li>
-            <li class="price-guide__item"><span>Ispanaklı Kiş</span> <span>75₺</span></li>
-            <li class="price-guide__item"><span>Granola Kasesi</span> <span>80₺</span></li>
-            <li class="price-guide__item"><span>Avokado Tost</span> <span>85₺</span></li>
+          <li class="price-guide__item"><span>Beyaz Peynirli Sandviç</span> <span>70₺</span></li>
+          <li class="price-guide__item"><span>Hindi Fümeli Kruvasan</span> <span>75₺</span></li>
+          <li class="price-guide__item"><span>Simit Tabağı</span> <span>75₺</span></li>
+          <li class="price-guide__item"><span>Ispanaklı Kiş</span> <span>75₺</span></li>
+          <li class="price-guide__item"><span>Granola Kasesi</span> <span>80₺</span></li>
+          <li class="price-guide__item"><span>Avokado Tost</span> <span>85₺</span></li>
         </ul>
 
         <h4 class="price-guide__subtitle">Tatlı Lezzetler</h4>
         <ul class="price-guide__list">
-            <li class="price-guide__item"><span>Yaban Mersinli Muffin</span> <span>50₺</span></li>
-            <li class="price-guide__item"><span>Damla Çikolatalı Kurabiye</span> <span>55₺</span></li>
-            <li class="price-guide__item"><span>Yoğun Çikolatalı Brownie</span> <span>65₺</span></li>
-            <li class="price-guide__item"><span>Glutensiz Brownie</span> <span>70₺</span></li>
-            <li class="price-guide__item"><span>Limonlu Cheesecake</span> <span>80₺</span></li>
-            <li class="price-guide__item"><span>San Sebastian Cheesecake</span> <span>85₺</span></li>
+          <li class="price-guide__item"><span>Yaban Mersinli Muffin</span> <span>50₺</span></li>
+          <li class="price-guide__item"><span>Çikolata Parçacıklı Kurabiye</span> <span>55₺</span></li>
+          <li class="price-guide__item"><span>Yoğun Çikolatalı Brownie</span> <span>65₺</span></li>
+          <li class="price-guide__item"><span>Glutensiz Brownie</span> <span>70₺</span></li>
+          <li class="price-guide__item"><span>Limonlu Cheesecake</span> <span>80₺</span></li>
+          <li class="price-guide__item"><span>San Sebastian Cheesecake</span> <span>85₺</span></li>
         </ul>
         <hr class="price-guide__separator">
 
         <div class="price-guide__total">
-          <h4>Güncel Tutar:</h4>
+          <h4>Ara Toplam:</h4>
           <p id="selected-price">0₺</p>
         </div>
-        
-        <p class="price-guide__note">Son fiyat ödeme sırasında onaylanacaktır.</p>
+
+        <p class="price-guide__note">Nihai fiyat kasada onaylanacaktır.</p>
       </aside>
-      </div>
+    </div>
   </main>
 
-   <footer class="footer">
+  <footer class="footer">
     <div class="container footer-layout">
-        <div class="footer-col">
-            <h4 class="footer-col__title">Nokta Kadıköy</h4>
-            <p>© 2025 Nokta Kadıköy. <br> Tüm hakları saklıdır.</p>
-        </div>
-        <div class="footer-col">
-            <h4 class="footer-col__title">Ziyaret Edin</h4>
-            <a class="footer-location" href="https://www.google.com/maps/place/Caferağa,+Muvakkıthane+Cd.+No:35,+34744+Kadıköy%2Fİstanbul/@40.9899742,29.0239142,19z/data=!3m1!4b1!4m14!1m7!3m6!1s0x14cab9c1c9494b8d:0x965f9da3619a2669!2sCoffy+Kadikoy!8m2!3d40.9900468!4d29.0244025!16s%2Fg%2F11fp4sm3_d!3m5!1s0x14cab867c6d15faf:0xbc1bba41c4694fa5!8m2!3d40.9899742!4d29.0245579!16s%2Fg%2F11xs_7grj8?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
-                <img src="assets/location.svg" alt="Konum" class="footer-location__icon">
-                <span>Kadıköy, İstanbul</span>
-            </a>
-        </div>
-        <div class="footer-col">
-            <h4 class="footer-col__title">Çalışma Saatleri</h4>
-            <p>Pzt - Cum: 8:00 - 22:00<br>Cmt - Paz: 9:00 - 23:00</p>
-        </div>
-        <div class="footer-col">
-            <h4 class="footer-col__title">Takip Edin</h4>
-            <ul class="socials">
-                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="assets/instagram.svg" alt="Instagram" class="socials__icon"></a></li>
-                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="assets/facebook.svg" alt="Facebook" class="socials__icon"></a></li>
-                <li><a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><img src="assets/twitter.svg" alt="Twitter" class="socials__icon"></a></li>
-            </ul>
-        </div>
+      <div class="footer-col">
+        <h4 class="footer-col__title">Nokta Kadıköy</h4>
+        <p>© 2025 Nokta Kadıköy. <br> Tüm hakları saklıdır.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col__title">Ziyaret Edin</h4>
+        <a class="footer-location"
+          href="https://www.google.com/maps/place/Caferağa,+Muvakkıthane+Cd.+No:35,+34744+Kadıköy%2Fİstanbul/@40.9899742,29.0239142,19z/data=!3m1!4b1!4m14!1m7!3m6!1s0x14cab9c1c9494b8d:0x965f9da3619a2669!2sCoffy+Kadikoy!8m2!3d40.9900468!4d29.0244025!16s%2Fg%2F11fp4sm3_d!3m5!1s0x14cab867c6d15faf:0xbc1bba41c4694fa5!8m2!3d40.9899742!4d29.0245579!16s%2Fg%2F11xs_7grj8?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank" rel="noopener noreferrer">
+          <img src="assets/location.svg" alt="Konum" class="footer-location__icon">
+          <span>Kadıköy, İstanbul</span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col__title">Çalışma Saatleri</h4>
+        <p>Pzt - Cum: 08:00 - 22:00<br>Cmt - Paz: 09:00 - 23:00</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col__title">Takip Edin</h4>
+        <ul class="socials">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img
+                src="assets/instagram.svg" alt="Instagram" class="socials__icon"></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img
+                src="assets/facebook.svg" alt="Facebook" class="socials__icon"></a></li>
+          <li><a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><img src="assets/twitter.svg"
+                alt="Twitter" class="socials__icon"></a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 
@@ -199,4 +296,5 @@
   <script src="script.js" defer></script>
 
 </body>
+
 </html>

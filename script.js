@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  
   const hamburgerBtn = document.querySelector('.hamburger-btn');
   const navMenu = document.querySelector('.nav');
-
 
   if (hamburgerBtn && navMenu) { 
     hamburgerBtn.addEventListener('click', () => {
@@ -14,26 +12,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const priceDisplay = document.getElementById('selected-price');
-  const productCheckboxes = document.querySelectorAll('.menu-checkboxes input[type="checkbox"]');
+  const quantityInputs = document.querySelectorAll('.form__input--quantity');
 
   function updateTotalPrice() {
       let totalPrice = 0;
-      productCheckboxes.forEach(checkbox => {
-          if (checkbox.checked) {
-              const priceString = checkbox.getAttribute('data-price');
-              totalPrice += parseFloat(priceString);
+      quantityInputs.forEach(input => {
+          const quantity = parseInt(input.value, 10);
+          
+          if (quantity > 0) {
+              const priceString = input.getAttribute('data-price');
+              const price = parseFloat(priceString);
+              totalPrice += (quantity * price);
           }
       });
       
       if (priceDisplay) {
-          priceDisplay.textContent = totalPrice + "₺";
+          const formattedPrice = totalPrice.toLocaleString('tr-TR');
+          priceDisplay.textContent = formattedPrice + "₺";
       }
   }
 
-  if (productCheckboxes.length > 0 && priceDisplay) {
+  if (quantityInputs.length > 0 && priceDisplay) {
       updateTotalPrice(); 
-      productCheckboxes.forEach(checkbox => {
-          checkbox.addEventListener('change', updateTotalPrice);
+      
+      quantityInputs.forEach(input => {
+          input.addEventListener('input', updateTotalPrice);
       });
   }
 
@@ -66,4 +69,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-}); 
+});
