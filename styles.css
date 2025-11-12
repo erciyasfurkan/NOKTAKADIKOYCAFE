@@ -423,8 +423,7 @@ img {
   margin-bottom: -0.5rem;
 }
 .form__input, 
-.form__textarea, 
-.form__select {
+.form__textarea {
   padding: 0.9rem;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
@@ -438,8 +437,7 @@ img {
   min-height: 80px;
 }
 .form__input:focus, 
-.form__textarea:focus, 
-.form__select:focus {
+.form__textarea:focus {
   outline: none;
   border-color: var(--color-accent);
   box-shadow: 0 0 0 3px hsla(30, 59%, 53%, 0.3);
@@ -478,6 +476,16 @@ img {
 .btn:hover {
   opacity: 0.9;
   transform: translateY(-2px);
+}
+.btn--accent {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+}
+.btn--accent:hover {
+  background-color: var(--color-accent);
+  color: var(--color-secondary); 
+  opacity: 1; 
 }
 .icon {
   width: 18px;
@@ -668,6 +676,10 @@ img {
 .menu-checkboxes .form__checkbox input {
   margin-right: 10px; 
   transform: scale(1.1); 
+}
+.map-container {
+  overflow: hidden;
+  line-height: 0; 
 }
 
 @media (min-width: 768px) {
