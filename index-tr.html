@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nokta Kadıköy</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <button class="hamburger-btn" aria-label="Menüyü aç/kapat" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </button>
+      <a href="index-tr.html" class="logo-link">
+        <img src="assets/logo-nokta-kadikoy.jpeg" alt="Nokta Kadıköy logo" class="logo" />
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index-tr.html" class="nav__link active">Ana Sayfa</a></li>
+          <li class="nav__item"><a href="order-tr.html" class="nav__link">Sipariş Ver</a></li>
+          <li class="nav__item"><a href="contact-tr.html" class="nav__link">İletişim</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switcher">
+        <a href="index.html" class="lang-btn">ENG</a>
+        <a href="index-tr.html" class="lang-btn active">TR</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="assets/coffee-hero.jpeg" alt="Kahve fincanları" class="hero__img" />
+    <div class="hero__content">
+      <h1 class="title">Nokta Kadıköy'e Hoş Geldiniz</h1>
+      <p class="subtitle">Her fincanda taze demlenmiş mutluluk.</p>
+      <a href="order-tr.html" class="btn">Sipariş Verin</a>
+    </div>
+  </section>
+
+  <section class="container page-section featured box-style">
+    <div class="featured__image-container">
+        <img src="assets/frappe.jpeg" alt="Öne Çıkan: Çikolatalı Kurabiyeli Frappe" class="featured__img">
+    </div>
+    <div class="featured__content">
+        <h2 class="featured__title">Ayın Özel Ürünü</h2>
+        <h3 class="featured__name">Çikolatalı Kurabiyeli Frappe</h3>
+        <p class="featured__description">
+            Zengin çikolata, çıtır kurabiyeler ve soğuk kahvenin baştan çıkarıcı bir karışımı, üzeri krem şanti ile süslenmiş. 
+            Serinlemek ve gününüzü tatlandırmak için mükemmel bir lezzet.
+        </p>
+        <a href="order-tr.html" class="btn">Şimdi Deneyin!</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="menu page-section">
+      <h2 class="section-title">Menümüz</h2>
+      <h3 class="menu-subtitle">Sıcak Kahveler</h3>
+      <div class="menu__grid">
+        <article class="card box-style">
+          <img src="assets/espresso.jpeg" alt="Espresso" class="card__img" />
+          <div class="card__content">
+            <h3 class="card__title">Espresso</h3>
+            <p class="card__description">Kahvenin kalbi, zengin ve yoğun bir atış.</p>
+            <div class="card__footer">
+              <p class="card__price">45₺</p>
+              <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+            </div>
+          </div>
+        </article>
+        <article class="card box-style">
+          <img src="assets/americano.jpeg" alt="Americano" class="card__img" />
+          <div class="card__content">
+            <h3 class="card__title">Americano</h3>
+            <p class="card__description">Sıcak su ile seyreltilmiş bir espresso shot.</p>
+            <div class="card__footer">
+              <p class="card__price">50₺</p>
+              <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+            </div>
+          </div>
+        </article>
+        <article class="card box-style">
+            <img src="assets/latte.jpeg" alt="Latte" class="card__img" />
+            <div class="card__content">
+              <h3 class="card__title">Latte</h3>
+              <p class="card__description">Espresso ve buharda ısıtılmış sütün kremamsı bir karışımı.</p>
+              <div class="card__footer">
+                <p class="card__price">55₺</p>
+                <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+              </div>
+            </div>
+        </article>
+        <article class="card box-style">
+            <img src="assets/cappuccino.jpeg" alt="Cappuccino" class="card__img" />
+            <div class="card__content">
+              <h3 class="card__title">Cappuccino</h3>
+              <p class="card__description">Espresso, buğulanmış süt ve köpüğün mükemmel dengesi.</p>
+              <div class="card__footer">
+                <p class="card__price">55₺</p>
+                <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+              </div>
+            </div>
+        </article>
+        <article class="card box-style">
+            <img src="assets/turkish.jpeg" alt="Türk Kahvesi" class="card__img" />
+            <div class="card__content">
+              <h3 class="card__title">Türk Kahvesi</h3>
+              <p class="card__description">Geleneksel lezzet, bol köpüklü ve bir lokum ikramıyla.</p>
+              <div class="card__footer">
+                <p class="card__price">50₺</p>
+                <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+              </div>
+            </div>
+        </article>
+        <article class="card box-style">
+            <img src="assets/flat-white.jpeg" alt="Flat White" class="card__img" />
+            <div class="card__content">
+              <h3 class="card__title">Flat White</h3>
+              <p class="card__description">Yoğun espresso ve kadifemsi pürüzsüz süt köpüğü.</p>
+              <div class="card__footer">
+                <p class="card__price">60₺</p>
+                <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+              </div>
+            </div>
+        </article>
+        <article class="card box-style">
+            <img src="assets/matcha-latte.jpeg" alt="Matcha Latte" class="card__img" />
+            <div class="card__content">
+              <h3 class="card__title">Matcha Latte</h3>
+              <p class="card__description">Japon yeşil çayı ve sütün enerjik ve lezzetli buluşması.</p>
+              <div class="card__footer">
+                <p class="card__price">75₺</p>
+                <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+              </div>
+            </div>
+        </article>
+        <article class="card box-style">
+            <img src="assets/cascara.jpeg" alt="Cascara (Kahve Çayı)" class="card__img" />
+            <div class="card__content">
+              <h3 class="card__title">Cascara (Kahve Kiraz Çayı)</h3>
+              <p class="card__description">Kurutulmuş kahve kirazlarından demlenmiş, eşsiz bir tat.</p>
+              <div class="card__footer">
+                <p class="card__price">70₺</p>
+                <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+              </div>
+            </div>
+        </article>
+        <article class="card box-style">
+            <img src="assets/hot-chocolate.jpeg" alt="Sıcak Çikolata" class="card__img" />
+            <div class="card__content">
+              <h3 class="card__title">Sıcak Çikolata</h3>
+              <p class="card__description">Zengin, kremamsı ve yoğun. Klasik bir keyif.</p>
+              <div class="card__footer">
+                <p class="card__price">70₺</p>
+                <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+              </div>
+            </div>
+        </article>
+      </div>
+      
+      
+      <h3 class="menu-subtitle">Soğuk İçecekler</h3>
+       <div class="menu__grid">
+         <article class="card box-style">
+            <img src="assets/cold-americano.jpeg" alt="Iced Americano" class="card__img" />
+            <div class="card__content">
+              <h3 class="card__title">Iced Americano</h3>
+              <p class="card__description">Soğuk su ile tamamlanan espresso shotları, buz üzerinde servis edilir.</p>
+              <div class="card__footer">
+                <p class="card__price">55₺</p>
+                <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+              </div>
+            </div>
+        </article>
+        <article class="card box-style">
+            <img src="assets/cold-brew.jpeg" alt="Cold Brew" class="card__img" />
+            <div class="card__content">
+              <h3 class="card__title">Cold Brew</h3>
+              <p class="card__description">Yumuşak içimli kahve, 12 saat soğuk demlenmiş.</p>
+              <div class="card__footer">
+                <p class="card__price">65₺</p>
+                <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+              </div>
+            </div>
+        </article>
+        <article class="card box-style">
+            <img src="assets/frappe.jpeg" alt="Çikolatalı Kurabiyeli Frappe" class="card__img" />
+            <div class="card__content">
+              <h3 class="card__title">Çikolatalı Kurabiyeli Frappe</h3>
+              <p class="card__description">Zengin çikolata, kurabiye ve soğuk kahve karışımı.</p>
+              <div class="card__footer">
+                <p class="card__price">85₺</p>
+                <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+              </div>
+            </div>
+        </article>
+        <article class="card box-style">
+            <img src="assets/milkshake.jpeg" alt="Milkshake" class="card__img" />
+            <div class="card__content">
+              <h3 class="card__title">Milkshake</h3>
+              <p class="card__description">Klasik, kremamsı ve lezzetli. Çeşitli aromalarda mevcuttur.</p>
+              <div class="card__footer">
+                <p class="card__price">75₺</p>
+                <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+              </div>
+            </div>
+        </article>
+        <article class="card box-style">
+            <img src="assets/iced-latte.jpeg" alt="Iced Latte" class="card__img" />
+            <div class="card__content">
+              <h3 class="card__title">Iced Latte</h3>
+              <p class="card__description">Buz üzerinde servis edilen soğuk espresso ve taze süt.</p>
+              <div class="card__footer">
+                <p class="card__price">60₺</p>
+                <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+              </div>
+            </div>
+        </article>
+        <article class="card box-style">
+            <img src="assets/lemonade.jpeg" alt="Ev Yapımı Limonata" class="card__img" />
+            <div class="card__content">
+              <h3 class="card__title">Ev Yapımı Limonata</h3>
+              <p class="card__description">Taze sıkılmış, naneli veya sade seçenekleriyle.</p>
+              <div class="card__footer">
+                <p class="card__price">65₺</p>
+                <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+              </div>
+            </div>
+        </article>
+        
+      </div>
+    </section>
+
+    <section class="menu page-section">
+      <h2 class="section-title">Tuzlu Atıştırmalıklar</h2>
+      <div class="menu__grid">
+          <article class="card box-style">
+              <img src="assets/sandwich.jpeg" alt="Beyaz Peynirli Sandviç" class="card__img" />
+              <div class="card__content">
+                  <h3 class="card__title">Beyaz Peynirli Sandviç</h3>
+                  <p class="card__description">Taze ve doyurucu bir atıştırmalık.</p>
+                  <ul class="card__ingredients">
+                      <li>Beyaz Peynir</li>
+                      <li>Domates & Salatalık</li>
+                      <li>Akdeniz Yeşillikleri</li>
+                  </ul>
+                  <div class="card__footer">
+                    <p class="card__price">70₺</p>
+                    <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+                  </div>
+              </div>
+          </article>
+          <article class="card box-style">
+              <img src="assets/croissant.jpeg" alt="Füme Hindili & Peynirli Kruvasan" class="card__img" />
+              <div class="card__content">
+                  <h3 class="card__title">Füme Hindili & Peynirli Kruvasan</h3>
+                  <p class="card__description">Çıtır kruvasan, füme hindi ve eritilmiş peynir ile.</p>
+                  <div class="card__footer">
+                    <p class="card__price">75₺</p>
+                    <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+                  </div>
+              </div>
+          </article>
+          <article class="card box-style">
+              <img src="assets/avocado-toast.jpeg" alt="Avokado Tost" class="card__img" />
+              <div class="card__content">
+                  <h3 class="card__title">Avokado Tost</h3>
+                  <p class="card__description">Ekşi mayalı ekmek üzerinde taze avokado ve çeri domates.</p>
+                  <div class="card__footer">
+                    <p class="card__price">85₺</p>
+                    <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+                  </div>
+              </div>
+          </article>
+          <article class="card box-style">
+              <img src="assets/bowl.jpeg" alt="Granola Kasesi" class="card__img" />
+              <div class="card__content">
+                  <h3 class="card__title">Granola Kasesi</h3>
+                  <p class="card__description">Yoğurt, taze mevsim meyveleri ve çıtır granola.</p>
+                  <div class="card__footer">
+                    <p class="card__price">80₺</p>
+                    <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+                  </div>
+              </div>
+          </article>
+          <article class="card box-style">
+              <img src="assets/simit.jpeg" alt="Simit Tabağı" class="card__img" />
+              <div class="card__content">
+                  <h3 class="card__title">Simit Tabağı</h3>
+                  <p class="card__description">Taze simit, peynir, zeytin, domates ve salatalık.</p>
+                  <div class="card__footer">
+                    <p class="card__price">75₺</p>
+                    <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+                  </div>
+              </div>
+          </article>
+          <article class="card box-style">
+              <img src="assets/quiche.jpeg" alt="Ispanaklı Kiş" class="card__img" />
+              <div class="card__content">
+                  <h3 class="card__title">Ispanaklı Kiş</h3>
+                  <p class="card__description">Doyurucu ve lezzetli bir dilim Fransız usulü kiş.</p>
+                  <div class="card__footer">
+                    <p class="card__price">75₺</p>
+                    <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+                  </div>
+              </div>
+          </article>
+      </div>
+    </section>
+    
+    <section class="menu page-section">
+      <h2 class="section-title">Tatlı Lezzetler</h2>
+      <div class="menu__grid">
+          <article class="card box-style">
+              <img src="assets/cheesecake.jpeg" alt="Cheesecake" class="card__img" />
+              <div class="card__content">
+                  <h3 class="card__title">Limonlu Cheesecake</h3>
+                  <p class="card__description">Serinletici limon ve krem peynirin eşsiz uyumu.</p>
+                  <div class="card__footer">
+                    <p class="card__price">80₺</p>
+                    <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+                  </div>
+              </div>
+          </article>
+          <article class="card box-style">
+              <img src="assets/brownie-2.jpeg" alt="Çikolatalı Brownie" class="card__img" />
+              <div class="card__content">
+                  <h3 class="card__title">Yoğun Çikolatalı Brownie</h3>
+                  <p class="card__description">Zengin ve yoğun çikolatalı brownie, sıcak servis edilir.</p>
+                  <div class="card__footer">
+                    <p class="card__price">65₺</p>
+                    <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+                  </div>
+              </div>
+          </article>
+          <article class="card box-style">
+              <img src="assets/muffin.jpeg" alt="Yaban Mersinli Muffin" class="card__img" />
+              <div class="card__content">
+                  <h3 class="card__title">Yaban Mersinli Muffin</h3>
+                  <p class="card__description">Taze yaban mersinleriyle dolu yumuşacık bir muffin.</p>
+                  <div class="card__footer">
+                    <p class="card__price">50₺</p>
+                    <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+                  </div>
+              </div>
+          </article>
+          <article class="card box-style">
+              <img src="assets/basque.jpeg" alt="San Sebastian Cheesecake" class="card__img" />
+              <div class="card__content">
+                  <h3 class="card__title">San Sebastian Cheesecake</h3>
+                  <p class="card__description">Meşhur yanık üstü, akışkan kremamsı dokusuyla.</p>
+                  <div class="card__footer">
+                    <p class="card__price">85₺</p>
+                    <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+                  </div>
+              </div>
+          </article>
+          <article class="card box-style">
+              <img src="assets/cookie.jpeg" alt="Damla Çikolatalı Kurabiye" class="card__img" />
+              <div class="card__content">
+                  <h3 class="card__title">Damla Çikolatalı Kurabiye</h3>
+                  <p class="card__description">Kocaman, içi yumuşak, taze pişmiş. Kahvenin en iyi dostu.</p>
+                  <div class="card__footer">
+                    <p class="card__price">55₺</p>
+                    <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+                  </div>
+              </div>
+          </article>
+          <article class="card box-style">
+              <img src="assets/brownie.jpeg" alt="Glutensiz Brownie" class="card__img" />
+              <div class="card__content">
+                  <h3 class="card__title">Glutensiz Brownie</h3>
+                  <p class="card__description">Tüm o zengin çikolata lezzeti, glutensiz olarak.</p>
+                  <div class="card__footer">
+                    <p class="card__price">70₺</p>
+                    <a href="order-tr.html" class="card__action-button"><img src="assets/cart.svg" alt="Sepete ekle"></a>
+                  </div>
+              </div>
+          </article>
+      </div>
+    </section>
+
+    <section class="about container page-section">
+      <div class="about__image">
+        <img src="assets/cafe-interior.jpeg" alt="Nokta Kadıköy İç Mekan">
+      </div>
+      <div class="about__content">
+        <h2 class="section-title">Hikayemiz</h2>
+        <p>2020 yılında Kadıköy'ün kalbinde kurulan Nokta Kadıköy, insanları olağanüstü hazırlanmış kahve ve sağlıklı, lezzetli yiyecekler etrafında bir araya getirme tutkusundan doğdu. Harika bir kafenin yemek ve içmekten daha fazlası olduğuna inanıyoruz; burası bir topluluk merkezi. Sunduğumuz her fincan yerel kaynaklı çekirdekler kullanılarak özenle demlenir ve her yemek en taze malzemelerle hazırlanır.</p>
+        <a href="contact-tr.html" class="btn">Daha Fazla Bilgi</a>
+      </div>
+    </section>
+
+   <section class="testimonials container page-section">
+      <h2 class="section-title">Müşterilerimiz Ne Diyor</h2>
+      
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          
+          <article class="testimonial box-style swiper-slide">
+            <img src="assets/customer-1.jpeg" alt="Müşteri fotoğrafı" class="testimonial__img">
+            <p class="testimonial__text">“Şehirdeki en iyi cappuccino! Personel her zaman güler yüzlü ve ortam sabah kahvesi için mükemmel.”</p>
+            <h4 class="testimonial__name">– Elif K.</h4>
+          </article>
+          
+          <article class="testimonial box-style swiper-slide">
+            <img src="assets/customer-2.jpeg" alt="Müşteri fotoğrafı" class="testimonial__img">
+            <p class="testimonial__text">“Buradaki sıcak atmosferi seviyorum. Ders çalışmak ve iyi bir kitap okumak için favori mekanım oldu.”</p>
+            <h4 class="testimonial__name">– Can B.</h4>
+          </article>
+          
+          <article class="testimonial box-style swiper-slide">
+            <img src="assets/customer-3.jpeg" alt="Müşteri fotoğrafı" class="testimonial__img">
+            <p class="testimonial__text">“Çikolatalı kurabiyeli frappe'leri kesinlikle harika! Hafta sonu kendimi şımartmak için favori lezzetim.”</p>
+            <h4 class="testimonial__name">– Merve S.</h4>
+          </article>
+          
+          <article class="testimonial box-style swiper-slide">
+            <img src="assets/customer-4.jpeg" alt="Müşteri fotoğrafı" class="testimonial__img">
+            <p class="testimonial__text">“Avokado Tost'u mutlaka denenmeli. Mükemmel baharatlanmış ve her zaman taze. Kadıköy'deki favori noktam!”</p>
+            <h4 class="testimonial__name">– Ahmet Y.</h4>
+          </article>
+
+          <article class="testimonial box-style swiper-slide">
+            <img src="assets/customer-5.jpeg" alt="Müşteri fotoğrafı" class="testimonial__img">
+            <p class="testimonial__text">“Sessiz, temiz ve Wi-Fi hızlı. Flat White'ları sert ve lezzetli. Uzaktan çalışmak için şiddetle tavsiye ederim.”</p>
+            <h4 class="testimonial__name">– Zeynep A.</h4>
+          </article>
+
+          <article class="testimonial box-style swiper-slide">
+            <img src="assets/customer-6.jpeg" alt="Müşteri fotoğrafı" class="testimonial__img">
+            <p class="testimonial__text">“San Sebastian Cheesecake'i denedik ve inanılmazdı. Çok kremamsı! Daha fazlası için kesinlikle geri geleceğiz.”</p>
+            <h4 class="testimonial__name">– Demir & Selin L.</h4>
+          </article>
+
+        </div>
+        
+        <div class="swiper-pagination"></div>
+      
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      
+    </section>
+
+  <section class="newsletter">
+    <div class="container newsletter__content">
+      <h2 class="newsletter__title">Takipte Kalın!</h2>
+      <p>Yeni sezon içecekleri, özel etkinlikler ve size özel teklifler hakkında güncellemeleri doğrudan e-postanıza alın.</p>
+      <form class="newsletter__form" action="summary-tr.html">
+        <input type="email" placeholder="E-posta adresinizi girin" class="newsletter__input" required>
+        <button type="submit" class="btn btn--accent">Abone Ol</button>
+      </form>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-layout">
+        <div class="footer-col">
+            <h4 class="footer-col__title">Nokta Kadıköy</h4>
+            <p>© 2025 Nokta Kadıköy. <br> Tüm hakları saklıdır.</p>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-col__title">Ziyaret Edin</h4>
+            <a class="footer-location" href="https://www.google.com/maps/place/Caferağa,+Muvakkıthane+Cd.+No:35,+34744+Kadıköy%2Fİstanbul/@40.9899742,29.0239142,19z/data=!3m1!4b1!4m14!1m7!3m6!1s0x14cab9c1c9494b8d:0x965f9da3619a2669!2sCoffy+Kadikoy!8m2!3d40.9900468!4d29.0244025!16s%2Fg%2F11fp4sm3_d!3m5!1s0x14cab867c6d15faf:0xbc1bba41c4694fa5!8m2!3d40.9899742!4d29.0245579!16s%2Fg%2F11xs_7grj8?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+                <img src="assets/location.svg" alt="Konum" class="footer-location__icon">
+                <span>Kadıköy, İstanbul</span>
+            </a>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-col__title">Çalışma Saatleri</h4>
+            <p>Pzt - Cum: 8:00 - 22:00<br>Cmt - Paz: 9:00 - 23:00</p>
+        </div>
+        <div class="footer-col">
+            <h4 class="footer-col__title">Takip Edin</h4>
+            <ul class="socials">
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="assets/instagram.svg" alt="Instagram" class="socials__icon"></a></li>
+                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="assets/facebook.svg" alt="Facebook" class="socials__icon"></a></li>
+                <li><a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><img src="assets/twitter.svg" alt="Twitter" class="socials__icon"></a></li>
+            </ul>
+        </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
