@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,16 +9,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="contact-page">
   <header class="header">
     <div class="container header__container">
 
       <button class="hamburger-btn" aria-label="Menüyü aç/kapat" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
         </svg>
       </button>
-      
+
       <a href="index.html" class="logo-link">
         <img src="assets/logo-nokta-kadikoy.jpeg" alt="Nokta Kadıköy logo" class="logo" />
       </a>
@@ -29,7 +31,7 @@
           <li class="nav__item"><a href="contact.html" class="nav__link active">Contact</a></li>
         </ul>
       </nav>
-      
+
       <div class="lang-switcher">
         <a href="contact.html" class="lang-btn active">ENG</a>
         <a href="contact-tr.html" class="lang-btn">TR</a>
@@ -40,55 +42,64 @@
     <h2 class="section-title">Contact Us</h2>
     <p class="section-subtitle">Your feedback, suggestions, and complaints are valuable to us.</p>
     <section class="page-section">
-    <form action="summary.html" method="GET" class="form box-style">
-      <label for="contact-name" class="form__label">Your Full Name</label>
-      <input type="text" id="contact-name" name="name" class="form__input" required />
-      <label for="contact-email" class="form__label">Your Email Address</label>
-      <input type="email" id="contact-email" name="email" class="form__input" required />
-      <label for="contact-subject" class="form__label">Subject</label>
-      <input type="text" id="contact-subject" name="subject" class="form__input" required />
-      <label for="contact-message" class="form__label">Your Message</label>
-      <textarea id="contact-message" name="message" class="form__textarea" rows="6" required></textarea>
-      <button type="submit" class="btn btn--accent">Send Message</button>
-    </form>
+      <form action="summary.html" method="POST" class="form box-style" data-netlify="true" netlify-honeypot="bot-field">
+
+        <p class="hidden" style="display: none;">
+          <label>
+            Bu alanı doldurma: <input name="bot-field" />
+          </label>
+        </p>
+
+        <label for="contact-name" class="form__label">Your Full Name</label>
+        <input type="text" id="contact-name" name="name" class="form__input" required />
+        <label for="contact-email" class="form__label">Your Email Address</label>
+        <input type="email" id="contact-email" name="email" class="form__input" required />
+        <label for="contact-subject" class="form__label">Subject</label>
+        <input type="text" id="contact-subject" name="subject" class="form__input" required />
+        <label for="contact-message" class="form__label">Your Message</label>
+        <textarea id="contact-message" name="message" class="form__textarea" rows="6" required></textarea>
+        <button type="submit" class="btn btn--accent">Send Message</button>
+      </form>
     </section>
     <h2 class="section-title">Visit Us</h2>
     <div class="map-container box-style">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d752.9030230318425!2d29.023914169614734!3d40.98997419820955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab867c6d15faf%3A0xbc1bba41c4694fa5!2zQ2FmZXJhxJ9hLCBNdXZha2vEsXRoYW5lIENkLiBObzozNSwgMzQ3NDQgS2FkxLFrw7Z5L8Swc3RhbmJ1bA!5e0!3m2!1sen!2str!4v1762959461188!5m2!1sen!2str" 
-      width="100%"
-      height="450" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d752.9030230318425!2d29.023914169614734!3d40.98997419820955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab867c6d15faf%3A0xbc1bba41c4694fa5!2zQ2FmZXJhxJ9hLCBNdXZha2vEsXRoYW5lIENkLiBObzozNSwgMzQ3NDQgS2FkxLFrw7Z5L8Swc3RhbmJ1bA!5e0!3m2!1sen!2str!4v1762959461188!5m2!1sen!2str"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
   </main>
 
   <footer class="footer">
     <div class="container footer-layout">
-        <div class="footer-col">
-            <h4 class="footer-col__title">Nokta Kadıköy</h4>
-            <p>© 2025 Nokta Kadıköy. <br> All rights reserved.</p>
-        </div>
-        <div class="footer-col">
-            <h4 class="footer-col__title">Visit Us</h4>
-            <a class="footer-location" href="https://www.google.com/maps/place/Caferağa,+Muvakkıthane+Cd.+No:35,+34744+Kadıköy%2Fİstanbul/@40.9899742,29.0239142,19z/data=!3m1!4b1!4m14!1m7!3m6!1s0x14cab9c1c9494b8d:0x965f9da3619a2669!2sCoffy+Kadikoy!8m2!3d40.9900468!4d29.0244025!16s%2Fg%2F11fp4sm3_d!3m5!1s0x14cab867c6d15faf:0xbc1bba41c4694fa5!8m2!3d40.9899742!4d29.0245579!16s%2Fg%2F11xs_7grj8?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
-                <img src="assets/location.svg" alt="Location" class="footer-location__icon">
-                <span>Kadıköy, İstanbul</span>
-            </a>
-        </div>
-        <div class="footer-col">
-            <h4 class="footer-col__title">Hours</h4>
-            <p>Mon - Fri: 8am - 10pm<br>Sat - Sun: 9am - 11pm</p>
-        </div>
-        <div class="footer-col">
-            <h4 class="footer-col__title">Follow Us</h4>
-            <ul class="socials">
-                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="assets/instagram.svg" alt="Instagram" class="socials__icon"></a></li>
-                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="assets/facebook.svg" alt="Facebook" class="socials__icon"></a></li>
-                <li><a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><img src="assets/twitter.svg" alt="Twitter" class="socials__icon"></a></li>
-            </ul>
-        </div>
+      <div class="footer-col">
+        <h4 class="footer-col__title">Nokta Kadıköy</h4>
+        <p>© 2025 Nokta Kadıköy. <br> All rights reserved.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col__title">Visit Us</h4>
+        <a class="footer-location"
+          href="https://www.google.com/maps/place/Caferağa,+Muvakkıthane+Cd.+No:35,+34744+Kadıköy%2Fİstanbul/@40.9899742,29.0239142,19z/data=!3m1!4b1!4m14!1m7!3m6!1s0x14cab9c1c9494b8d:0x965f9da3619a2669!2sCoffy+Kadikoy!8m2!3d40.9900468!4d29.0244025!16s%2Fg%2F11fp4sm3_d!3m5!1s0x14cab867c6d15faf:0xbc1bba41c4694fa5!8m2!3d40.9899742!4d29.0245579!16s%2Fg%2F11xs_7grj8?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank" rel="noopener noreferrer">
+          <img src="assets/location.svg" alt="Location" class="footer-location__icon">
+          <span>Kadıköy, İstanbul</span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col__title">Hours</h4>
+        <p>Mon - Fri: 8am - 10pm<br>Sat - Sun: 9am - 11pm</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col__title">Follow Us</h4>
+        <ul class="socials">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img
+                src="assets/instagram.svg" alt="Instagram" class="socials__icon"></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img
+                src="assets/facebook.svg" alt="Facebook" class="socials__icon"></a></li>
+          <li><a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><img src="assets/twitter.svg"
+                alt="Twitter" class="socials__icon"></a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 
@@ -97,4 +108,5 @@
   <script src="script.js" defer></script>
 
 </body>
+
 </html>

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Place Your Order - Nokta Kadıköy</title>
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Place Your Order - Nokta Kadıköy</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body class="order-page">
   <header class="header">
     <div class="container header__container">
       <button class="hamburger-btn" aria-label="Menüyü aç/kapat" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
         </svg>
       </button>
       <a href="index.html" class="logo-link">
@@ -36,74 +38,110 @@
     <h2 class="section-title">Create Your Order</h2>
     <div class="order-layout">
       <div class="order-form-container">
-        <form action="summary.html" method="GET" class="form box-style">
-            <label for="name" class="form__label">Your Full Name</label>
-            <input type="text" id="name" name="name" class="form__input" required />
-            
-            <div class="form__group menu-checkboxes">
-                <legend class="form__legend">Select Your Items</legend>
-                
-                <fieldset class="form__group">
-                    <legend class="form__legend--inner">Hot Coffees</legend>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Espresso" data-price="45"> Espresso</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Americano" data-price="50"> Americano</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Latte" data-price="55"> Latte</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Cappuccino" data-price="55"> Cappuccino</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Turkish Coffee" data-price="50"> Turkish Coffee</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Flat White" data-price="60"> Flat White</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Matcha Latte" data-price="75"> Matcha Latte</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Cascara (Coffee Cherry Tea)" data-price="70"> Cascara (Coffee Cherry Tea)</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Hot Chocolate" data-price="70"> Hot Chocolate</label>
-                </fieldset>
-                
-                <fieldset class="form__group">
-                    <legend class="form__legend--inner">Cold Beverages</legend>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Iced Americano" data-price="55"> Iced Americano</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Cold Brew" data-price="65"> Cold Brew</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Chocolate Cookie Frappe" data-price="85"> Chocolate Cookie Frappe</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Milkshake" data-price="75"> Milkshake</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Iced Latte" data-price="60"> Iced Latte</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Homemade Lemonade" data-price="65"> Homemade Lemonade</label>
-                    </fieldset>
+        <form action="summary.html" method="POST" class="form box-style" data-netlify="true"
+          netlify-honeypot="bot-field">
 
-                <fieldset class="form__group">
-                    <legend class="form__legend--inner">Savory Bites</legend>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Feta Cheese Sandwich" data-price="70"> Feta Cheese Sandwich</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Smoked Turkey & Cheese Croissant" data-price="75"> Smoked Turkey & Cheese Croissant</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Avocado Toast" data-price="85"> Avocado Toast</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Granola Bowl" data-price="80"> Granola Bowl</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Simit Plate" data-price="75"> Simit Plate</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Spinach Quiche" data-price="75"> Spinach Quiche</label>
-                </fieldset>
+          <p class="hidden" style="display: none;">
+            <label>
+              Bu alanı doldurma: <input name="bot-field" />
+            </label>
+          </p>
 
-                <fieldset class="form__group">
-                    <legend class="form__legend--inner">Sweet Treats</legend>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Lemon Cheesecake" data-price="80"> Lemon Cheesecake</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Fudgy Chocolate Brownie" data-price="65"> Fudgy Chocolate Brownie</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Blueberry Muffin" data-price="50"> Blueberry Muffin</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="San Sebastian Cheesecake" data-price="85"> San Sebastian Cheesecake</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Chocolate Chip Cookie" data-price="55"> Chocolate Chip Cookie</label>
-                    <label class="form__checkbox"><input type="checkbox" name="product" value="Gluten-Free Brownie" data-price="70"> Gluten-Free Brownie</label>
-                </fieldset>
-            </div>
-            
+          <label for="name" class="form__label">Your Full Name</label>
+          <input type="text" id="name" name="name" class="form__input" required />
+
+          <div class="form__group menu-checkboxes">
+            <legend class="form__legend">Select Your Items</legend>
+
             <fieldset class="form__group">
-                <legend class="form__legend">Service Type</legend>
-                <label class="form__radio"><input type="radio" name="service_type" value="dine-in" required> Dine-in</label>
-                <label class="form__radio"><input type="radio" name="service_type" value="takeaway"> Takeaway</label>
+              <legend class="form__legend--inner">Hot Coffees</legend>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Espresso" data-price="45">
+                Espresso</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Americano" data-price="50">
+                Americano</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Latte" data-price="55">
+                Latte</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Cappuccino" data-price="55">
+                Cappuccino</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Turkish Coffee"
+                  data-price="50"> Turkish Coffee</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Flat White" data-price="60">
+                Flat White</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Matcha Latte" data-price="75">
+                Matcha Latte</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Cascara (Coffee Cherry Tea)"
+                  data-price="70"> Cascara (Coffee Cherry Tea)</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Hot Chocolate" data-price="70">
+                Hot Chocolate</label>
             </fieldset>
-            <label for="notes" class="form__label">Additional Notes</label>
-            <textarea id="notes" name="notes" class="form__textarea" rows="4" placeholder="Milk preference, special requests..."></textarea>
-            <button type="submit" class="btn btn--accent">
-                Complete Order <img src="assets/heart.svg" alt="heart" class="icon" />
-            </button>
+
+            <fieldset class="form__group">
+              <legend class="form__legend--inner">Cold Beverages</legend>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Iced Americano"
+                  data-price="55"> Iced Americano</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Cold Brew" data-price="65">
+                Cold Brew</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Chocolate Cookie Frappe"
+                  data-price="85"> Chocolate Cookie Frappe</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Milkshake" data-price="75">
+                Milkshake</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Iced Latte" data-price="60">
+                Iced Latte</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Homemade Lemonade"
+                  data-price="65"> Homemade Lemonade</label>
+            </fieldset>
+
+            <fieldset class="form__group">
+              <legend class="form__legend--inner">Savory Bites</legend>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Feta Cheese Sandwich"
+                  data-price="70"> Feta Cheese Sandwich</label>
+              <label class="form__checkbox"><input type="checkbox" name="product"
+                  value="Smoked Turkey & Cheese Croissant" data-price="75"> Smoked Turkey & Cheese Croissant</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Avocado Toast" data-price="85">
+                Avocado Toast</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Granola Bowl" data-price="80">
+                Granola Bowl</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Simit Plate" data-price="75">
+                Simit Plate</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Spinach Quiche"
+                  data-price="75"> Spinach Quiche</label>
+            </fieldset>
+
+            <fieldset class="form__group">
+              <legend class="form__legend--inner">Sweet Treats</legend>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Lemon Cheesecake"
+                  data-price="80"> Lemon Cheesecake</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Fudgy Chocolate Brownie"
+                  data-price="65"> Fudgy Chocolate Brownie</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Blueberry Muffin"
+                  data-price="50"> Blueberry Muffin</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="San Sebastian Cheesecake"
+                  data-price="85"> San Sebastian Cheesecake</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Chocolate Chip Cookie"
+                  data-price="55"> Chocolate Chip Cookie</label>
+              <label class="form__checkbox"><input type="checkbox" name="product" value="Gluten-Free Brownie"
+                  data-price="70"> Gluten-Free Brownie</label>
+            </fieldset>
+          </div>
+
+          <fieldset class="form__group">
+            <legend class="form__legend">Service Type</legend>
+            <label class="form__radio"><input type="radio" name="service_type" value="dine-in" required> Dine-in</label>
+            <label class="form__radio"><input type="radio" name="service_type" value="takeaway"> Takeaway</label>
+          </fieldset>
+          <label for="notes" class="form__label">Additional Notes</label>
+          <textarea id="notes" name="notes" class="form__textarea" rows="4"
+            placeholder="Milk preference, special requests..."></textarea>
+          <button type="submit" class="btn btn--accent">
+            Complete Order <img src="assets/heart.svg" alt="heart" class="icon" />
+          </button>
         </form>
       </div>
-      
+
       <aside class="price-guide box-style">
         <h3 class="price-guide__title">Price List</h3>
-        
-       <h4 class="price-guide__subtitle">Hot Coffees</h4>
+
+        <h4 class="price-guide__subtitle">Hot Coffees</h4>
         <ul class="price-guide__list">
           <li class="price-guide__item"><span>Espresso</span> <span>45₺</span></li>
           <li class="price-guide__item"><span>Americano</span> <span>50₺</span></li>
@@ -125,25 +163,25 @@
           <li class="price-guide__item"><span>Chocolate Cookie Frappe</span> <span>85₺</span></li>
         </ul>
         <hr class="price-guide__separator">
-        
+
         <h4 class="price-guide__subtitle">Savory Bites</h4>
         <ul class="price-guide__list">
-            <li class="price-guide__item"><span>Feta Sandwich</span> <span>70₺</span></li>
-            <li class="price-guide__item"><span>Smoked Turkey Croissant</span> <span>75₺</span></li>
-            <li class="price-guide__item"><span>Simit Plate</span> <span>75₺</span></li>
-            <li class="price-guide__item"><span>Spinach Quiche</span> <span>75₺</span></li>
-            <li class="price-guide__item"><span>Granola Bowl</span> <span>80₺</span></li>
-            <li class="price-guide__item"><span>Avocado Toast</span> <span>85₺</span></li>
+          <li class="price-guide__item"><span>Feta Sandwich</span> <span>70₺</span></li>
+          <li class="price-guide__item"><span>Smoked Turkey Croissant</span> <span>75₺</span></li>
+          <li class="price-guide__item"><span>Simit Plate</span> <span>75₺</span></li>
+          <li class="price-guide__item"><span>Spinach Quiche</span> <span>75₺</span></li>
+          <li class="price-guide__item"><span>Granola Bowl</span> <span>80₺</span></li>
+          <li class="price-guide__item"><span>Avocado Toast</span> <span>85₺</span></li>
         </ul>
 
         <h4 class="price-guide__subtitle">Sweet Treats</h4>
         <ul class="price-guide__list">
-            <li class="price-guide__item"><span>Blueberry Muffin</span> <span>50₺</span></li>
-            <li class="price-guide__item"><span>Chocolate Chip Cookie</span> <span>55₺</span></li>
-            <li class="price-guide__item"><span>Fudgy Chocolate Brownie</span> <span>65₺</span></li>
-            <li class="price-guide__item"><span>Gluten-Free Brownie</span> <span>70₺</span></li>
-            <li class="price-guide__item"><span>Lemon Cheesecake</span> <span>80₺</span></li>
-            <li class="price-guide__item"><span>San Sebastian Cheesecake</span> <span>85₺</span></li>
+          <li class="price-guide__item"><span>Blueberry Muffin</span> <span>50₺</span></li>
+          <li class="price-guide__item"><span>Chocolate Chip Cookie</span> <span>55₺</span></li>
+          <li class="price-guide__item"><span>Fudgy Chocolate Brownie</span> <span>65₺</span></li>
+          <li class="price-guide__item"><span>Gluten-Free Brownie</span> <span>70₺</span></li>
+          <li class="price-guide__item"><span>Lemon Cheesecake</span> <span>80₺</span></li>
+          <li class="price-guide__item"><span>San Sebastian Cheesecake</span> <span>85₺</span></li>
         </ul>
         <hr class="price-guide__separator">
 
@@ -151,37 +189,42 @@
           <h4>Current Total:</h4>
           <p id="selected-price">0₺</p>
         </div>
-        
+
         <p class="price-guide__note">Final price will be confirmed at checkout.</p>
       </aside>
-      </div>
+    </div>
   </main>
 
- <footer class="footer">
+  <footer class="footer">
     <div class="container footer-layout">
-        <div class="footer-col">
-            <h4 class="footer-col__title">Nokta Kadıköy</h4>
-            <p>© 2025 Nokta Kadıköy. <br> All rights reserved.</p>
-        </div>
-        <div class="footer-col">
-            <h4 class="footer-col__title">Visit Us</h4>
-            <a class="footer-location" href="https://www.google.com/maps/place/Caferağa,+Muvakkıthane+Cd.+No:35,+34744+Kadıköy%2Fİstanbul/@40.9899742,29.0239142,19z/data=!3m1!4b1!4m14!1m7!3m6!1s0x14cab9c1c9494b8d:0x965f9da3619a2669!2sCoffy+Kadikoy!8m2!3d40.9900468!4d29.0244025!16s%2Fg%2F11fp4sm3_d!3m5!1s0x14cab867c6d15faf:0xbc1bba41c4694fa5!8m2!3d40.9899742!4d29.0245579!16s%2Fg%2F11xs_7grj8?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
-                <img src="assets/location.svg" alt="Location" class="footer-location__icon">
-                <span>Kadıköy, İstanbul</span>
-            </a>
-        </div>
-        <div class="footer-col">
-            <h4 class="footer-col__title">Hours</h4>
-            <p>Mon - Fri: 8am - 10pm<br>Sat - Sun: 9am - 11pm</p>
-        </div>
-        <div class="footer-col">
-            <h4 class="footer-col__title">Follow Us</h4>
-            <ul class="socials">
-                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="assets/instagram.svg" alt="Instagram" class="socials__icon"></a></li>
-                <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="assets/facebook.svg" alt="Facebook" class="socials__icon"></a></li>
-                <li><a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><img src="assets/twitter.svg" alt="Twitter" class="socials__icon"></a></li>
-            </ul>
-        </div>
+      <div class="footer-col">
+        <h4 class="footer-col__title">Nokta Kadıköy</h4>
+        <p>© 2025 Nokta Kadıköy. <br> All rights reserved.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col__title">Visit Us</h4>
+        <a class="footer-location"
+          href="https://www.google.com/maps/place/Caferağa,+Muvakkıthane+Cd.+No:35,+34744+Kadıköy%2Fİstanbul/@40.9899742,29.0239142,19z/data=!3m1!4b1!4m14!1m7!3m6!1s0x14cab9c1c9494b8d:0x965f9da3619a2669!2sCoffy+Kadikoy!8m2!3d40.9900468!4d29.0244025!16s%2Fg%2F11fp4sm3_d!3m5!1s0x14cab867c6d15faf:0xbc1bba41c4694fa5!8m2!3d40.9899742!4d29.0245579!16s%2Fg%2F11xs_7grj8?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank" rel="noopener noreferrer">
+          <img src="assets/location.svg" alt="Location" class="footer-location__icon">
+          <span>Kadıköy, İstanbul</span>
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col__title">Hours</h4>
+        <p>Mon - Fri: 8am - 10pm<br>Sat - Sun: 9am - 11pm</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col__title">Follow Us</h4>
+        <ul class="socials">
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img
+                src="assets/instagram.svg" alt="Instagram" class="socials__icon"></a></li>
+          <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img
+                src="assets/facebook.svg" alt="Facebook" class="socials__icon"></a></li>
+          <li><a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer"><img src="assets/twitter.svg"
+                alt="Twitter" class="socials__icon"></a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 
@@ -190,4 +233,5 @@
   <script src="script.js" defer></script>
 
 </body>
+
 </html>
