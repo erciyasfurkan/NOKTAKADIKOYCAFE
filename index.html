@@ -141,7 +141,10 @@
     <div class="container newsletter__content">
       <h2 class="newsletter__title">Stay in the Loop!</h2>
       <p>Get updates about new seasonal drinks, special events, and exclusive offers delivered right to your inbox.</p>
-      <form class="newsletter__form" action="summary.html">
+      <form name="newsletter" class="newsletter__form" action="/summary.html" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <p class="hidden" style="display: none;">
+          <label>Bu alanı doldurma: <input name="bot-field" /></label>
+        </p>
         <input type="email" placeholder="Enter your email" class="newsletter__input" required>
         <button type="submit" class="btn btn--accent">Subscribe</button>
       </form>
